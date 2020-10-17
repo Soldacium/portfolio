@@ -1,0 +1,41 @@
+
+<main>
+     
+    <nav>
+        <div class="logo" [routerLink]='["/main"]'>
+            WWW
+        </div>
+        <ul class='links'>
+            <li><a [routerLink]='["/main"]' [ngClass]="(router.isActive('/main',true))?'active':'naah'">Home</a></li>
+            <li><a [routerLink]='["/projects"]' [ngClass]="(router.isActive('/projects',true))?'active':'naah'">Portfolio</a></li>
+            <li><a [routerLink]='["/about"]' [ngClass]="(router.isActive('/about',true))?'active':'naah'">About</a></li>
+            <li><a [routerLink]='["/contact"]' [ngClass]="(router.isActive('/contact',true))?'active':'naah'">Contact</a></li>
+            
+        </ul>
+        <div class="hamburger" (click)='change()'
+        [ngClass]="active ? 'active' : 'naah' ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>    
+    </nav>
+
+    
+    
+
+</main>    
+<div class="bonus">
+
+</div>
+
+<div class="overlay" [ngClass]="active ? 'visible' : 'naah'">
+    <div class="nav2">
+        <ul >
+            <li><a [routerLink]='["/main"]' [ngClass]="(router.isActive('/main',false))?'active':'naah'" (click)='change()'>Home</a></li>
+            <li><a [routerLink]='["/projects"]' [ngClass]="(router.isActive('/projects',false))?'active':'naah'" (click)='change()'>Portfolio</a></li>
+            <li><a [routerLink]='["/about"]' [ngClass]="(router.isActive('/about',false))?'active':'naah'" (click)='change()'>About</a></li>
+            <li><a [routerLink]='["/contact"]' [ngClass]="(router.isActive('/contact',false))?'active':'naah'" (click)='change()'>Contact</a></li>
+        </ul>
+    </div>
+</div>

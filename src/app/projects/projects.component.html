@@ -1,0 +1,42 @@
+<div class="bg">
+
+</div>
+<section class="intro">
+    <h1 class="big">My projects</h1>
+    <h3 class="general">Hey there, here's some of my most recent work; <br>
+    Both finished and soon-to-be finished projects are listed. <br> You can find all the code and more on my github. <br>
+    Have fun!</h3>
+    <a class="github" href="https://github.com/Soldacium/" target="_blank"> Visit Github</a>
+    <div class="tags">
+        <!--
+         <div class="info"></div>   
+        -->
+        
+        <div class="tag" *ngFor='let taggy of tags' (click)='pickCategory(taggy)' [ngClass]="(searchingFor.includes(taggy)?'active':'naah')">{{taggy}}</div>
+
+    </div>
+</section>
+<section class="listing">
+    <span class="invis"></span>
+
+    <div class="proj" *ngFor='let project of searchResults'>
+        <div class="pic">
+            <img src="{{project.photo}}" alt="">
+            <a class="cover" href="{{project.web}}" target="_blank">
+                <div class="cover-icon"></div>
+                <div class="cover-text"> Click to get more info</div>
+            </a>            
+        </div>
+        <h1 class="name">{{project.name}}</h1>
+        <div class="text">
+            {{project.desc}}
+            <a class="code" href="{{project.code}}" target="_blank"></a>
+        </div>
+        <div class="used">
+            <div class="miniTag" *ngFor='let tag of project.tags'>
+                {{tag}}
+            </div>
+        </div>
+
+    </div>
+</section>

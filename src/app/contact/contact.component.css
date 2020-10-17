@@ -1,0 +1,314 @@
+
+
+main{
+    position: relative;
+    width: 100%;
+    height: 92%;
+    padding: 5% 10%;
+    background-color: var(--background);
+
+}
+main > div{
+    position: relative;
+    float: left;
+}
+
+.toMe{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px 3px rgb(34, 34, 34);
+}
+.toMe > div{
+    position: absolute;
+    display: block;
+    
+}
+
+
+
+
+
+.quickMail{
+    width: 90%;
+    height: 100%;
+    left: calc(-80% - 25px);
+    background-color: rgb(32, 32, 32);
+    transition: 0.6s;
+    z-index: 2;
+}
+.quickMail::after{
+    content: '';
+    width: 50px;
+    height: 100%;
+    position: absolute;
+    left: calc(100% - 1px);
+    top: 0;
+    
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    background-color: rgb(32, 32, 32);
+}
+.quickMail::before{
+    content: '';
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    filter: drop-shadow(-1px 6px 3px rgba(212, 212, 212, 0.651));
+}
+.quickMail.active{
+    left: 0;
+}
+.quickMail > *{
+    position: relative;
+    float: left;
+}
+
+.quickMail > button{
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    right: -100px;
+    transform: translate(-50%,-50%);
+    background-color: rgb(78, 78, 78);
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    z-index: 100;
+    background-image: url('../../assets/icons/next.svg');
+    background-position: center;
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    transition: 0.3s;
+    outline: none;
+    
+}
+.quickMail > button:hover{
+    background-color: rgb(253, 33, 107);
+    cursor: pointer;
+}
+.quickMail > button.active{
+    transform: rotateZ(180deg) translate(50%,50%);
+    
+}
+
+
+
+
+
+
+
+
+
+.mailForm{
+    width: 60%;
+    height: 100%;
+    padding: 10%;
+    background-color: rgba(87, 87, 87, 0);
+}
+
+.mailForm > *{
+    position: relative;
+    float: left;
+    margin-top: 25px;
+    border: none;
+    
+}
+
+.mailForm  input{
+    border: none;
+    background-color: rgb(53, 53, 53);
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    color: white;
+    box-shadow: 0px 0px 3px 3px inset rgb(26, 26, 26);
+    
+}
+
+.input-box {
+    width: 100%;
+}
+
+.input-box label{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(196, 196, 196);
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.input-box input:focus ~ label{
+    bottom: 41px;
+    color: rgb(226, 32, 80);
+}
+.input-box input:valid ~ label{
+    bottom: 41px;
+    color: rgb(226, 32, 80);
+}
+
+
+.hey{
+    width: 60%;
+    margin-right: 40%;
+    height: 40px;
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+}
+.hey2{
+    width: 80%;
+    margin-right: 20%;
+    height: 40px;
+    color: rgb(231, 231, 231);
+    font-size: 16px;
+    font-weight: 500;
+}
+.name{
+
+}
+.mail{
+
+}
+.message{
+    background-color: rgb(44, 44, 44);
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    resize: none;
+    overflow-y: auto;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 3px 3px inset rgb(26, 26, 26);
+    font-size: 1.3rem;
+    
+}
+.button{
+    margin-left: calc(50% - 80px);
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--primaryColor);
+    box-shadow: 1px 1px 2px 2px rgb(27, 27, 27);
+    transition: 0.3s;
+
+    display: flex;
+    align-items: center;
+    
+}
+.button p{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 600;   
+}
+.button:hover{
+    box-shadow: 0px 0px 4px var(--primaryColor);
+    cursor: pointer;
+}
+
+.mailIcon{
+    width: 30%;
+    height: 50%;
+    margin: 5%;
+    margin-top: 15%;
+    background-image: url('../../assets/images/plane2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    background-color: rgba(145, 49, 49, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.otherForms{
+    width: 100%;
+    height: 100%;
+    right: 0;
+    background-color: rgb(54, 54, 54);
+    transition: 0.6s;
+}
+
+.otherForms.active{
+    right: 0;
+}
+.otherForms > div{
+    position: relative;
+    float: left;
+}
+.desc{
+    width: 60%;
+    margin-left: 10%;
+    padding: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.desc h2{
+    font-size: calc(2rem + 1vw);
+}
+
+.buttons{
+    width: 30%;
+    height: 100%;
+    
+    box-shadow: 1px 1px 3px 2px rgb(34, 34, 34);
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons a{
+    display: flex;
+    flex: 1 1 25rem;
+    background-color: var(--background);
+    border: none;
+    transition: 0.5s;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+}
+.buttons a:hover{
+    background-color: var(--primaryColor);
+    color: white;
+    cursor: pointer;
+}
+.buttons a:hover > img{
+    filter: grayscale(100%) invert();
+}
+.buttons a h2{
+    
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+}
+.buttons a img{
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-left: 1rem;
+    filter: grayscale(100%);
+}
+

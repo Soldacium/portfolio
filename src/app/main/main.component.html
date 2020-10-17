@@ -1,0 +1,99 @@
+<div class="miniNav">
+    <p (click)='goTo(0)' [ngClass]='(section==0)?"active":"naah"'> 01</p>
+    <p (click)='goTo(1)' [ngClass]='(section==1)?"active":"naah"'> 02</p>
+    <p (click)='goTo(2)' [ngClass]='(section==2)?"active":"naah"'> 03</p>
+    <p (click)='goTo(4)' [ngClass]='(section==3)?"active":"naah"'> 04</p> <!-- <i class="fa fa-circle"></i>-->
+</div>
+
+<section class="canvasDiv">
+    <canvas id='canvas'></canvas>
+    <h1 class="words">
+        Illuminating Solutions
+    </h1>
+    <!--
+    <div class="desc">
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+        reprehenderit in voluptate velit esse cillum dolore
+
+    </div>        
+    -->
+
+</section>
+
+<section class="intro" id=''>
+    <!--
+    <div class="canvas2" id='canvasWrapper' >
+        <canvas id='canv2'></canvas>
+    </div>        
+    -->
+    <div class="wrap">
+        <h1 class="title"> Quick About.</h1>
+        <p class="text"> My name's Wojtek and I'm self-taught front-end developer and science enthusiast. 
+        I've been programming for more than 5 years using modern languages like python or javascript. <br><br>
+        After 25% of my life doing this, I'm ready to put those skills to work.</p>
+        <button class="button draw" [routerLink]='["/about"]'>Get to know</button>        
+    </div>
+
+
+</section>
+<section class="section2">
+
+    <!--
+      <div class="about1">&lt;/ Main Skills &gt;</div>  
+    -->
+    <div class="skills">
+
+        <div class="skill">
+            <div class="iconField">
+                <div class="icon js"></div>
+                <div class="icon html"></div>
+                <div class="icon css"></div>
+            </div>
+
+            <h2 class="skill-title">Strong fundamentals</h2>
+            <p class="skill-desc">All what's needed for front-end development, I try always put them to best use. Fluent in three fundamentals, I make website designs a reality.</p>       
+        </div>
+        
+        <div class="skill">
+            <div class="iconField">
+                <div class="icon angular"></div>
+            </div>
+
+            <h2 class="skill-title">Main framework</h2>
+            <p class="skill-desc">Using angular as frakework of choice my work becomes faster and clearer. It unlocks more freedom to everything I do, and so I try to learn more and more about it with each project. </p>
+        </div>
+        
+        <div class="skill">
+            <div class="iconField">
+                <div class="icon rxjs"></div>
+                <div class="icon git"></div>
+                <div class="icon mongo"></div>
+            </div>
+
+            <h2 class="skill-title">Up with technologies</h2>
+            <p class="skill-desc">Development not only of my websites but also skills. I always try to learn new techniques or code algorithms in other languages, to later convert into Javascript and use newest tools avaiable. <br><br> Always happy to learn.</p>
+        </div>        
+    </div>
+
+
+    <button [routerLink]='["/projects"]'>Check out portfolio</button>
+
+    
+    
+
+</section>
+<section class="section3">
+    <h1>Quick Access</h1>
+    <div class="projects">
+        <a class="project path" href="https://soldacium.github.io/pathfinding/" target="_blank">
+            <a class="project-code" href="https://github.com/Soldacium/pathfinding/" target="_blank"></a>
+        </a>
+        <a class="project blog" href="https://soldacium.github.io/blogStyly/" target="_blank">
+            <a class="project-code" href="https://github.com/Soldacium/blogStyly/" target="_blank"></a>
+        </a>
+    </div>
+</section>

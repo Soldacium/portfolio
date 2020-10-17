@@ -1,0 +1,68 @@
+<main>
+    <div class="toMe">
+                        <!--
+        <div class="switchButton"></div>            
+                -->
+        
+        <div class="quickMail"  [ngClass]="(mail==true)?'active':'naah'">
+            
+            <form class="mailForm" (submit)="sendEmail($event)">
+
+                
+                <div class="hey">Let's talk</div>
+                <div class="hey2">Write me quick (or lenghty) message and get in touch</div>
+                <div class="input-box">
+                    <input class="name" name="name" type="text" id="name" required>
+                    <label >Name</label>
+                    <!--
+                    <div *ngIf='name.invalid && (name.dirty || name.touched)' class='error'>
+                        WRONG.
+                    </div>                        
+                    -->
+
+                    
+                </div>
+                <div class="input-box">
+                    <input class="mail" name="mail" type="email" required> 
+                    <label >Mail</label>
+                                       
+                </div>
+
+                <textarea class="message" name="message"></textarea>
+                <button class="button" type="submit" value="Send"><p>Send</p></button>
+            </form>
+            <div class="mailIcon"></div>
+            <button (click)='switchTo()' [ngClass]="(mail==true)?'active':'naah'"></button>
+            
+        </div>
+        <div class="otherForms" [ngClass]="(mail==false)?'active':'naah'">
+            
+            <div class="desc">
+                <h2 class="title">...Or just look for social accounts</h2>
+                
+                <p class="lilDesc1">
+                    The quickest way to finding me is to write me an email, but I also have other means of communications <br><br>
+                    Professional <b>LinkedIn and Github</b> for more throughly communication, or social media accounts to hit me up casually, look up what am I doing and general stuff.
+                </p>
+            </div>
+            <div class="buttons">
+                <a href="https://www.linkedin.com/in/wojciech-bulek-10a7321b3" target="_blank">
+                    <h2>Facebook</h2>
+                    <img src="assets/icons/facebook.svg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/wojciech-bulek-10a7321b3" target="_blank">
+                    <h2>Instagram</h2>
+                    <img src="assets/icons/instagram.svg" alt="">
+                </a>
+                <a>
+                    <h2>LinkedIn</h2>
+                    <img src="assets/icons/linkedin.svg" alt="">
+                </a>
+                <a>
+                    <h2>Github</h2>
+                    <img src="assets/icons/github2.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</main>

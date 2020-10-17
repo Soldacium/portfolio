@@ -1,0 +1,257 @@
+
+
+main{
+
+}
+
+section{
+    display: flex;
+    position: relative;
+    width: 100%;
+    
+    padding: 5% 10%;
+    
+}
+
+.intro{
+    flex-wrap: wrap-reverse;
+    background-image: url('../../assets/icons/Endless-Constellation5.svg');
+    
+}
+
+.intro > *{
+    position: relative;
+    flex: 1 1 30rem;
+    background-color: rgba(255, 255, 255, 0);
+    
+
+    color: white;
+    
+}
+figure img{
+    width: 100%;
+    padding: 20%;
+    background-position: center;
+    background-size: cover;
+}
+
+.desc{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+/**** PAST ******/
+.past{
+    background-color: rgb(41, 41, 41);
+    flex-direction: column;
+}
+
+
+
+p {
+    font-weight: 300;
+}
+a {
+    color: #6c6d6d;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    letter-spacing: 0.3em;
+    font-size: 0.6em;
+    font-weight: 400;
+    background: #252727;
+    padding: 0.3rem 1rem;
+    margin: 0rem 0.5rem;
+    float: right;
+    transition: 0.3s;
+    
+}
+a:hover {
+    color: white;
+    background: var(--primaryColor);
+}
+strong {
+    font-weight: 600;
+}
+h1 {
+    letter-spacing: 1.5px;
+    color: white;
+    font-weight: 400;
+    font-size: 2.4em;
+}
+#timeline-content {
+    margin-top: 50px;
+    text-align: center;
+}
+/* Timeline */
+.timeline {
+    border-left: 4px solid var(--primaryColor);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.5px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 25px;
+    list-style: none;
+    text-align: left;
+    font-weight: 100;
+    max-width: calc(200px + 60%);
+}
+.timeline h1 {
+    letter-spacing: 1.5px;
+    font-weight: 100;
+    font-size: 1.4em;
+}
+.timeline h2,
+.timeline h3 {
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 1.4em;
+}
+.timeline .event {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    padding: 15px 15px;
+    margin-bottom: 50px;
+    position: relative;
+    transition: 0.3s;
+    border-radius: 5px;
+
+}
+.timeline .event:hover{
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.timeline .event:last-of-type {
+    
+    margin-bottom: 0;
+    border: none;
+}
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+.timeline .event:before {
+    left: -217.5px;
+    color: rgba(255, 255, 255, 0.4);
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+    
+}
+.timeline .event:after {
+    box-shadow: 0 0 0 4px var(--primaryColor);
+    left: -35.85px;
+    background: #313534;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    content: "";
+    top: 5px;
+}
+
+
+/****** PRESENT **********/
+
+.present{
+    background-color: rgb(41, 41, 41);
+    flex-direction: column;
+    color: rgb(65, 65, 65);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    margin-bottom: 6rem;
+    flex-wrap: wrap;
+}
+
+.skill{
+    display: inline-flex;
+    margin: 1rem;
+    margin-top: 1rem;
+    position: relative;
+    padding: 1rem 2.5rem;
+    font-size: calc(1rem );
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.068);
+    box-shadow: rgb(32, 32, 32) 0 0 3px 2px inset;
+    transition: 0.3s;
+    
+}
+
+.skill:hover{
+    cursor: pointer;
+    box-shadow: none;
+    background-color: var(--primaryColor);
+}
+
+.present button{
+    display: flex;
+    padding: 1.3rem 4rem;
+    background-color: rgba(255, 255, 255, 0.068);
+    color: white;
+    margin: auto;
+    font-size: 1.5rem;
+    border: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    
+}
+.present button:hover{
+    background-color: var(--primaryColor);
+    cursor: pointer;
+}
+
+.future{
+    color: white;
+    flex-direction: column;
+    align-items: flex-end;
+    background-image: url('../../assets/icons/Endless-Constellation5.svg');
+}
+
+.plan{
+    background-color: rgb(41, 41, 41);
+    padding: 0.5rem 3rem;
+    margin: 0.5rem;
+    border: 4px solid var(--primaryColor);
+    border-radius: 10px;
+    position: relative;
+    text-align: right;
+    max-width: calc(200px + 40%);
+}
+
+.plan::before{
+    right: calc(18px - 3rem);
+    top: 50%;
+    content: '';
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid var(--primaryColor);
+    background-color: var(--background);
+}
+
+  
+
+
